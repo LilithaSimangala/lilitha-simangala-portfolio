@@ -1,0 +1,411 @@
+:root {
+  --navy: #0F2747;
+  --blue: #246BCE;
+  --soft-blue: #DCEBFA;
+  --off-white: #F8FAFC;
+  --text: #172033;
+  --line: #C9D8EA;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--off-white);
+  color: var(--text);
+  font-family: "Manrope", sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container,
+.site-header {
+  width: min(1120px, calc(100% - 2rem));
+  margin: auto;
+}
+
+.site-header {
+  height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: var(--navy);
+  font-family: "Sora", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.1em;
+}
+
+.logo span {
+  color: var(--blue);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.7rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.nav-links a:hover,
+.text-link:hover,
+.project-card a:hover,
+.contact-links a:hover {
+  color: var(--blue);
+}
+
+.contact-nav {
+  padding: 0.55rem 0.9rem;
+  border-radius: 6px;
+  background: var(--navy);
+  color: white;
+}
+
+.menu-button {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: var(--navy);
+  font: 700 0.9rem "Manrope", sans-serif;
+}
+
+.hero {
+  padding: 7.5rem 0 6rem;
+}
+
+.eyebrow,
+.project-type {
+  margin: 0 0 0.7rem;
+  color: var(--blue);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--navy);
+  font-family: "Sora", sans-serif;
+  line-height: 1.15;
+}
+
+h1 {
+  max-width: 880px;
+  margin: 0;
+  font-size: clamp(2.7rem, 7vw, 5.6rem);
+  letter-spacing: -0.07em;
+}
+
+h1 span {
+  color: var(--blue);
+}
+
+h2 {
+  margin: 0;
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  letter-spacing: -0.06em;
+}
+
+.hero-text {
+  max-width: 660px;
+  margin: 1.6rem 0 2rem;
+  font-size: 1.08rem;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.8rem 1.1rem;
+  border: 1px solid var(--navy);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  transition: 0.2s;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.primary-button {
+  background: var(--navy);
+  color: white;
+}
+
+.secondary-button {
+  color: var(--navy);
+}
+
+.quick-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 4rem;
+  color: var(--navy);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.quick-skills span {
+  padding-right: 1rem;
+  border-right: 1px solid var(--line);
+}
+
+.quick-skills span:last-child {
+  border: 0;
+}
+
+.section {
+  padding: 6.5rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.about-section {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 8%;
+}
+
+.about-text p:first-child {
+  margin-top: 0;
+}
+
+.text-link,
+.project-card a {
+  display: inline-block;
+  margin-top: 0.8rem;
+  color: var(--navy);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.skills-grid article {
+  padding: 1.5rem;
+  border: 1px solid var(--soft-blue);
+  border-radius: 8px;
+  background: white;
+}
+
+.skills-grid h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1rem;
+}
+
+.skills-grid p {
+  margin: 0;
+  font-size: 0.88rem;
+}
+
+.projects-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.projects-heading > p {
+  max-width: 360px;
+  margin: 0;
+  font-size: 0.94rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 2.7rem;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 1rem;
+  min-height: 330px;
+  padding: 1.7rem;
+  border: 1px solid var(--soft-blue);
+  border-radius: 8px;
+  background: white;
+}
+
+.featured-card {
+  grid-column: span 2;
+  background: var(--navy);
+  color: #EAF2FC;
+}
+
+.featured-card h3,
+.featured-card .project-number {
+  color: white;
+}
+
+.featured-card .project-type,
+.featured-card a {
+  color: #A9CEFF;
+}
+
+.project-number {
+  color: var(--blue);
+  font: 700 0.8rem "Sora", sans-serif;
+}
+
+.project-card h3 {
+  margin: 0.4rem 0 0.9rem;
+  font-size: 1.35rem;
+  letter-spacing: -0.04em;
+}
+
+.project-card p:not(.project-type) {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 1.25rem;
+}
+
+.tags span {
+  padding: 0.25rem 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.featured-card .tags span {
+  border-color: #537CAB;
+}
+
+.all-projects {
+  margin-top: 1.8rem;
+}
+
+.contact-section {
+  margin-top: 1rem;
+  padding: 6.5rem 8%;
+  border-radius: 10px;
+  background: var(--soft-blue);
+  text-align: center;
+}
+
+.contact-section h2 {
+  max-width: 800px;
+  margin: auto;
+}
+
+.contact-section > p:not(.eyebrow) {
+  max-width: 650px;
+  margin: 1rem auto 0;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  color: var(--navy);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+footer {
+  padding: 2rem 1rem;
+  color: #526176;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 760px) {
+  .menu-button {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 1rem;
+    width: 210px;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: stretch;
+    border: 1px solid var(--soft-blue);
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 10px 25px rgba(15, 39, 71, 0.12);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hero {
+    padding: 5rem 0 4.5rem;
+  }
+
+  .about-section,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-card {
+    grid-column: auto;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-heading {
+    display: block;
+  }
+
+  .projects-heading > p {
+    margin-top: 1rem;
+  }
+
+  .project-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-section {
+    padding: 4.5rem 1.2rem;
+  }
+}
