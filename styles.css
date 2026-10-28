@@ -247,6 +247,125 @@ h2 {
   font-size: 0.88rem;
 }
 
+.cv-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.cv-card {
+  padding: 1.7rem;
+  border: 1px solid var(--soft-blue);
+  border-radius: 8px;
+  background: white;
+}
+
+.cv-card h3,
+.certificates-block h3 {
+  margin: 0 0 0.8rem;
+  font-size: 1.2rem;
+}
+
+.cv-card .eyebrow {
+  margin-bottom: 0.45rem;
+}
+
+.cv-meta {
+  margin: 0 0 1rem;
+  color: #526176;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.cv-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 0.88rem;
+}
+
+.cv-card li + li {
+  margin-top: 0.55rem;
+}
+
+.education-list {
+  list-style: none;
+  padding: 0 !important;
+}
+
+.education-list li + li {
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--soft-blue);
+}
+
+.education-list strong,
+.education-list span {
+  display: block;
+}
+
+.education-list span {
+  color: #526176;
+  font-size: 0.84rem;
+}
+
+.certificates-block {
+  margin-top: 3rem;
+}
+
+.certificates-block > div:first-child {
+  margin-bottom: 1.2rem;
+}
+
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.certificate-card {
+  display: flex;
+  min-height: 175px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.4rem;
+  border: 1px solid var(--soft-blue);
+  border-radius: 8px;
+  background: white;
+  transition: 0.2s;
+}
+
+.certificate-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--blue);
+}
+
+.certificate-provider {
+  color: var(--blue);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.certificate-card strong {
+  color: var(--navy);
+  font-family: "Sora", sans-serif;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.certificate-action {
+  color: var(--navy);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.certificate-card:hover .certificate-action {
+  color: var(--blue);
+}
+
 .projects-heading {
   display: flex;
   align-items: end;
@@ -398,7 +517,8 @@ footer {
   }
 
   .about-section,
-  .project-grid {
+  .project-grid,
+  .cv-grid {
     grid-template-columns: 1fr;
   }
 
